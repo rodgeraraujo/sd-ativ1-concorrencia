@@ -21,7 +21,7 @@ public class SelectService {
         try {
             PreparedStatement statement = null;
 
-            statement = connection.prepareStatement("SELECT * FROM TABLE_1");
+            statement = connection.prepareStatement("SELECT * FROM Usuario");
 
             long tempoInicial = System.currentTimeMillis();
 

@@ -35,7 +35,7 @@ public class ComThreadService {
             Runnable inserir = () -> {
                 try {
                     finalStmtInserir.setInt(1, id.getAndIncrement());
-                    finalStmtInserir.setString(2, String.format("Nome%d", id.getAndIncrement()));
+                    finalStmtInserir.setString(2, String.format("Nome%d - ", id.getAndIncrement()));
                     finalStmtInserir.executeUpdate();
                 } catch (SQLException ex) {
                     ex.printStackTrace();

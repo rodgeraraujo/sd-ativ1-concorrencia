@@ -37,7 +37,7 @@ public class BlockingQueuePutService {
                 PreparedStatement stmtInserir = connection.prepareStatement(sqlInserr);
 
                 stmtInserir.setInt(1, localId);
-                stmtInserir.setString(2, String.format("Nome%d", localId));
+                stmtInserir.setString(2, String.format("Nome%d - ", localId));
                 stmtInserir.executeUpdate();
 
                 queueAtualizar.put(localId);

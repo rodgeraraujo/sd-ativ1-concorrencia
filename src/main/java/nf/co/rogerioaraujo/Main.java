@@ -11,8 +11,8 @@ public class Main {
         //SERVICOS
         SelectService select = new SelectService();
         SimpleService simpleCrud = new SimpleService();
-        BlockingQueueOfferService blockingQueue1 = new BlockingQueueOfferService();
-        BlockingQueuePutService blockingQueue2 = new BlockingQueuePutService();
+        BlockingQueueOfferService offer = new BlockingQueueOfferService();
+        BlockingQueuePutService put = new BlockingQueuePutService();
         ComThreadService threads = new ComThreadService();
         TruncateService database = new TruncateService();
 
@@ -29,13 +29,13 @@ public class Main {
         database.truncade();
 
         //UTILIZANDO FILA BLOQUEANTE - OFFER
-        blockingQueue1.blockingQueueOffer();
+        offer.blockingQueueOffer();
 
         //limpando tabela Usuario do banco de dados
         database.truncade();
 
         //UTILIZANDO FILA BLOQUEANTE - PUT
-        blockingQueue2.blockingQueuePut();
+        put.blockingQueuePut();
 
         //limpando tabela Usuario do banco de dados
         database.truncade();
